@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --text-color: white;
+    --gold-color:  rgb(221, 185, 69);
+    --subtext-color: rgb(196 191 192);
+    --sub-color: rgb(207 185 145);
+    --fontstyle: 'Work Sans', sans-serif; 
+    --background-color: #141414;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+nav {
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    color: var(--text-color);
+    font-family: var(--fontstyle);
+    font-size: 18px;
+    height: 70px;
+}
+
+.navbar {
+    transition: 0.1s ease;
+    background: #141414; 
+}
+
+.navbar-active {
+    transition: 0.3s ease-in;
+    background: linear-gradient(#141414,transparent);
+}
+
+.logo {
+    height: 50px;
+    padding-right: 25px;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    padding-left: 50px;
+    gap: 25px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.links li:hover, .profile-list:hover {
+    cursor: pointer;
+    color: var(--subtext-color);
+    transition: 0.3s ease;
+}
+
+.search-bar {
+    height: 2.5em;
+    width: 250px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    border: 0.5px solid white;
+    margin-left: -150px;
+    background: transparent;
+    font-family: var(--fontstyle);
+    color: white;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    width: 40px;
+    background: transparent;
+    border: none;
+}
+
+.menu {
+    position:absolute;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.triangle {
+    align-self: flex-end;
+    padding: 5px 0px;
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 40px 15px 15px; 
+    list-style: none;
+    background-color: var(--background-color);
+}
+
+.menu-items li:hover {
+    color: var(--gold-color); 
+    cursor: pointer;
+}
+
+
+.profile-nav {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    padding-right: 50px;
+}
