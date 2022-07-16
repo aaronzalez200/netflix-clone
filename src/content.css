@@ -1,0 +1,85 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: var(--fontstyle);
+    font-size: 1.2rem;
+    color: white;
+    margin-top: -5rem;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    left: calc(100vw - (100vw - 100%) - 50px);
+    height: 300px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0.3;
+    border-radius: 0.4vw 0 0 0.4vw;
+}
+
+.right img {
+    opacity: 0;
+}
+
+.right img:hover {
+    opacity: 1;
+}
+
+.right:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    opacity: 1;
+    border-radius: 0.4vw 0 0 0.4vw;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    height: 300px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0.3;
+    border-radius: 0 0.4vw 0.4vw 0;
+}
+
+.left img {
+    opacity: 0;
+}
+
+.left img:hover {
+    opacity: 1;
+}
+
+.left:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    opacity: 1;
+    border-radius: 0 0.4vw 0.4vw 0;
+    cursor: pointer;
+}
+
+.video-titles {
+    padding-left: 50px;
+}
+
+.Images-Here {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.Images-Here-Fill {
+    height: 300px;
+    border-radius: 0.5vw;
+}

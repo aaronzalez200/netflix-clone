@@ -17,7 +17,7 @@ export default function App() {
     }
     function handleScroll() {
       console.log(scroll)
-      if(window.scrollY > 100) {
+      if(window.scrollY > 20) {
         setScroll(true)
       } else {
         setScroll(false)

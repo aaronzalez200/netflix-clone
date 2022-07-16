@@ -11,8 +11,6 @@ export default function App() {
             <div className="video-text">
                 <h1 className="title">Hunt Showdown</h1>
                 <p className="description">TreeHard's 1v1 Clutch</p>
-                <br></br>
-                <br></br>
                 <div className="sub-text">
                     <div className="Play">
                         <img src={Play} height="30px" />
