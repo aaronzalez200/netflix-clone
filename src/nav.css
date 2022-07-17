@@ -19,7 +19,7 @@ body {
 }
 
 nav {
-    z-index: 10;
+    z-index: 20;
     display: flex;
     position: fixed;
     width: 100%;
@@ -55,7 +55,7 @@ nav {
     align-items: center;
 }
 
-.links, .profile-list li , .profile-list{
+.links, .links_small, .profile-list li , .profile-list{
     color: var(--text-color);
     font-family: var(--fontstyle);
     font-size: 18px;
@@ -126,4 +126,46 @@ nav {
     align-items: center;
     gap: 25px;
     padding-right: 50px;
+}
+
+.small-nav {
+    position:absolute;
+    top: 70px;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 40px 15px 15px; 
+    list-style: none;
+    background-color: var(--background-color);
+}
+
+@media(max-width: 1400px) {
+    .links {
+        display: none;
+    }
+    .links_small {
+        display: flex;
+        list-style: none;
+        padding-left: 50px;
+        gap: 25px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .links_small li:hover {
+        cursor: pointer;
+        color: var(--subtext-color);
+        transition: 0.3s ease;
+    }
+    .Hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 1400px) {
+    .links_small {
+        display: none;
+    }
 }

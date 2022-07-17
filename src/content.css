@@ -99,6 +99,7 @@
     justify-content: center;
     width: 100%;
     overflow: hidden;
+    padding-bottom: 20px;
 }
 
 .slider {

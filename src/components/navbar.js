@@ -3,13 +3,19 @@ import Triangle from '../images/triangle.png'
 import Eunha from '../images/Eunha.PNG'
 import Logo from '../images/Logo.png'
 import Search from '../images/search-icon.png'
+import Hamburger from '../images/Hamburger.png'
 
 export default function App() {
 
     const [toggleMenu, setToggleMenu] = React.useState(false)
     const [search, setSearch] = React.useState(false)
     const [scroll, setScroll] = React.useState(false)
+    const [screen, setScreen] = React.useState('')
+    const [toggleNav, setToggleNav] = React.useState(false)
 
+    function handleNavClick() {
+      setToggleNav(prevState => !prevState)
+    }
     function toggleSearch() {
       setSearch(prevState => !prevState)
     }
@@ -58,6 +64,27 @@ export default function App() {
               Pros-Live
             </li>
           </ul>
+          <div className="links_small">
+            <img src={Logo} className="logo"/>
+              <div className="nav-col">
+                <img className="Hamburger" src={Hamburger} width="50px" onClick={handleNavClick}/>
+                {toggleNav && (
+                  <ul className="small-nav">
+                    <li tabindex="0">
+                    Home
+                    </li>
+                  <li tabindex="0">
+                    Region
+                    </li>
+                    <li tabindex="0">
+                    Educational
+                  </li>
+                  <li tabindex="0">
+                      Pros-Live
+                  </li>
+                </ul>)}
+              </div>
+            </div>
           <ul className="profile-nav">
              {search && (
                 <div className="input-section">
