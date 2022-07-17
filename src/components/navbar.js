@@ -9,12 +9,27 @@ export default function App() {
     const [toggleMenu, setToggleMenu] = React.useState(false)
     const [search, setSearch] = React.useState(false)
     const [scroll, setScroll] = React.useState(false)
+
     function toggleSearch() {
       setSearch(prevState => !prevState)
     }
+
     function openMenu() {
       setToggleMenu(prevState => !prevState)
     }
+
+    function enterMenu(event) {
+      if (event.key === 'Enter') {
+        setToggleMenu(prevState => !prevState)
+      }
+    }
+
+    function enterSearch(event) {
+      if (event.key === 'Enter') {
+        setSearch(prevState => !prevState)
+      }
+    }
+
     function handleScroll() {
       console.log(scroll)
       if(window.scrollY > 20) {
@@ -23,17 +38,25 @@ export default function App() {
         setScroll(false)
       }
     }
-    window.addEventListener('scroll', handleScroll)
 
+    window.addEventListener('scroll', handleScroll)
 
     return (
       <nav className={scroll ? "navbar" : "navbar-active"} onScroll={handleScroll}>
           <ul className="links">
             <img src={Logo} className="logo"/>
-            <li>Home</li>
-            <li>Region</li>
-            <li>Educational</li>
-            <li>Pros-Live</li>
+            <li tabindex="0">
+              Home
+            </li>
+            <li tabindex="0">
+              Region
+            </li>
+            <li tabindex="0">
+              Educational
+            </li>
+            <li tabindex="0">
+              Pros-Live
+            </li>
           </ul>
           <ul className="profile-nav">
              {search && (
@@ -44,11 +67,13 @@ export default function App() {
                   </button>
                 </div>
               )}
-            <li className="profile-list" onClick={toggleSearch}>
+            <li className="profile-list"  tabindex="0" onClick={toggleSearch} onKeyDown={enterSearch}>
               Search
             </li>
-            <li className="profile-list">Notifications</li>
-            <li className="profile-list" onClick={openMenu}>
+            <li className="profile-list" tabindex="0">
+              Notifications
+            </li>
+            <li className="profile-list" tabindex="0" onClick={openMenu} onKeyDown={enterMenu}>
               Profile
             </li>
             {toggleMenu && (

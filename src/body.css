@@ -30,13 +30,18 @@
 
 .sub-text {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    width: calc(100vw - 30%);
     font-size: 2em + 1rem;
-    height: 60px;
+    height: 100px;
     border-radius: 15px;
     font-family: var(--fontstyle);
+}
+
+.video-background-buttons {
+    display: flex;
+    gap: 20px;
 }
 
 .Play {
@@ -66,4 +71,19 @@
 .More-Info:hover {
     background-color: rgba(196, 191, 192, 0.3);;
     cursor: pointer;
+}
+
+.Audio-play {
+    justify-items: flex-end;
+}
+
+.Audio-mute {
+    justify-items: flex-end;
+}
+
+.Audio img:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    height: 100px;
 }

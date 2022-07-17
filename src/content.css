@@ -1,3 +1,23 @@
+* {
+    scrollbar-width: none;
+
+}
+
+::-webkit-scrollbar {
+    height: 0;  /* Remove scrollbar space */
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #eeeeee;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #b0b0b0;
+  }
+
 .content {
     display: flex;
     flex-direction: column;
@@ -9,12 +29,16 @@
     gap: 10px;
 }
 
+.right-none {
+    display: none;
+}
+
 .right {
+    z-index: 10;
+    flex-grow: 0;
     display: flex;
-    position: absolute;
     align-items: center;
     left: calc(100vw - (100vw - 100%) - 50px);
-    height: 300px;
     width: 50px;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0.3;
@@ -31,19 +55,20 @@
 
 .right:hover {
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    position: absolute;
     opacity: 1;
     border-radius: 0.4vw 0 0 0.4vw;
     cursor: pointer;
 }
 
+.left-none {
+    display: none;
+}
+
 .left {
+    z-index: 10;
+    flex-grow: 0;
     display: flex;
-    position: absolute;
     align-items: center;
-    height: 300px;
     width: 50px;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0.3;
@@ -60,9 +85,6 @@
 
 .left:hover {
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    position: absolute;
     opacity: 1;
     border-radius: 0 0.4vw 0.4vw 0;
     cursor: pointer;
@@ -72,14 +94,60 @@
     padding-left: 50px;
 }
 
-.Images-Here {
+.media-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    
+    flex-grow: 1;
+    width: calc(100% - 2 * 50px);
+}
+
+.group1{
     display: flex;
     gap: 20px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    padding-left: 50px;
+}
+
+.group2 {
+    display: flex;
+    gap: 20px;
+    scroll-snap-align: start;
+    padding-left: 20px;
+}
+
+.slider > img {
+    flex: 0 0 25%;
+    max-width: 25%;
+    aspect-ratio: 16 / 9;
+    padding: .25rem;
 }
 
 .Images-Here-Fill {
-    height: 300px;
-    border-radius: 0.5vw;
+    border-radius: 1vw;
 }
+
+
+@media (pointer:coarse) { 
+    .left {
+        display: none;
+    }
+    .right {
+        display: none;
+    }
+    .slider{
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline mandatory;
+    }
+    .group1 img {
+        scroll-snap-align: start; 
+    }
+  }
