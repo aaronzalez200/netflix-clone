@@ -2,7 +2,7 @@ import React from 'react'
 import Eunha from '../images/Eunha.PNG'
 import Play from '../images/Play.png'
 import Info from '../images/Info.png'
-import Video from '../videos/video.mp4'
+import MainVideo from '../videos/MainVideo.mp4'
 import Audio from '../images/Audio.png'
 import Mute from '../images/Muted.png'
 
@@ -18,19 +18,21 @@ export default function App() {
           setToggleMute(prevState => !prevState)
         }
       }
+
+    const playRef = React.useRef();
     
     return (
         <div className='video-container'>
             <div className="video-text">
-                <h1 className="title">Hunt Showdown</h1>
-                <p className="description">TreeHard's 1v1 Clutch</p>
+                <h1 className="title">Team Liquid Dota 2</h1>
+                <p className="description">This Will Be Our Improvement Arc</p>
                 <div className="sub-text">
                     <div className="video-background-buttons">
-                        <div className="Play" tabindex="0">
-                            <img src={Play} height="30px" />
+                        <div className="Play" tabIndex="0"  onClick={() => (playRef.current).requestFullscreen()}  >
+                            <img src={Play} height="30px"/>
                             <p>Play</p>
                         </div>
-                        <div className="More-Info" tabindex="0">
+                        <div className="More-Info" tabIndex="0">
                             <img src={Info} height="30px"/>
                             <p>More Info</p>
                         </div>
@@ -40,8 +42,8 @@ export default function App() {
                     </div>
                 </div>
             </div>
-            <video className='video' loop muted={toggleMute} autoplay="autoplay">
-                <source src={Video} type="video/mp4"/>
+            <video className='video' ref={playRef} loop muted={toggleMute} autoPlay="autoPlay">
+                <source src={MainVideo}  type="video/mp4"/>
             </video>
         </div>
     )

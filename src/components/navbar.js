@@ -51,16 +51,16 @@ export default function App() {
       <nav className={scroll ? "navbar" : "navbar-active"} onScroll={handleScroll}>
           <ul className="links">
             <img src={Logo} className="logo"/>
-            <li tabindex="0">
+            <li tabIndex="0">
               Home
             </li>
-            <li tabindex="0">
+            <li tabIndex="0">
               Region
             </li>
-            <li tabindex="0">
+            <li tabIndex="0">
               Educational
             </li>
-            <li tabindex="0">
+            <li tabIndex="0">
               Pros-Live
             </li>
           </ul>
@@ -70,16 +70,16 @@ export default function App() {
                 <img className="Hamburger" src={Hamburger} width="50px" onClick={handleNavClick}/>
                 {toggleNav && (
                   <ul className="small-nav">
-                    <li tabindex="0">
+                    <li tabIndex="0">
                     Home
                     </li>
-                  <li tabindex="0">
+                  <li tabIndex="0">
                     Region
                     </li>
-                    <li tabindex="0">
+                    <li tabIndex="0">
                     Educational
                   </li>
-                  <li tabindex="0">
+                  <li tabIndex="0">
                       Pros-Live
                   </li>
                 </ul>)}
@@ -94,13 +94,13 @@ export default function App() {
                   </button>
                 </div>
               )}
-            <li className="profile-list"  tabindex="0" onClick={toggleSearch} onKeyDown={enterSearch}>
+            <li className="profile-list"  tabIndex="0" onClick={toggleSearch} onKeyDown={enterSearch}>
               Search
             </li>
-            <li className="profile-list" tabindex="0">
+            <li className="profile-list" tabIndex="0">
               Notifications
             </li>
-            <li className="profile-list" tabindex="0" onClick={openMenu} onKeyDown={enterMenu}>
+            <li className="profile-list" tabIndex="0" onClick={openMenu} onKeyDown={enterMenu}>
               Profile
             </li>
             {toggleMenu && (

@@ -36,9 +36,8 @@
 .media-container {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    height: 40rem;
-    bottom: 21rem;
+    align-items: center;
+    height: 23rem;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -47,16 +46,20 @@
 .bar1 {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    z-index: 10;
+}
+
+.bar2 {
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
 }
 
 .slider {
     display: flex;
     flex-grow: 1;
     width: calc(100% - 2 * 50px);
-   
 }
-
 
 .left {
     z-index: 10;
@@ -65,10 +68,10 @@
     align-items: center;
     width: 50px;
     height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0.3;
-    border-radius: 0 0.4vw 0.4vw 0;
+    border-radius: 0 1vw 1vw 0;
 }
 
 .left img {
@@ -82,7 +85,7 @@
 .left:hover {
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 1;
-    border-radius: 0 0.4vw 0.4vw 0;
+    border-radius: 0 1vw 1vw 0;
     cursor: pointer;
 }
 
@@ -93,10 +96,10 @@
     align-items: center;
     width: 50px;
     height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0.3;
-    border-radius: 0.4vw 0 0 0.4vw;
+    border-radius: 1vw 0 0 1vw;
 }
 
 .right img {
@@ -110,54 +113,64 @@
 .right:hover {
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 1;
-    border-radius: 0.4vw 0 0 0.4vw;
+    border-radius: 1vw 0 0 1vw;
     cursor: pointer;
 }
 
-
-
 .group1{
     display: flex;
-    gap: 20px;
+    gap: 4.26rem;
     scroll-snap-align: start;
     padding-left: 50px;
 }
 
-.group1 img {
+.group1 img{
     border-radius: 1vw;
     height: 300px;
     aspect-ratio: 16 / 9;
-    padding: .25rem;
 }
 
+.group1 iframe{
+    border-radius: 1vw;
+    height: 300px;
+    aspect-ratio: 16 / 9;
+}
 
-.Content2 {
-    position: relative;
+.group1 iframe:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .Card {
+    bottom: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     z-index: 10;
     background-color: 	hsl(0, 0%, 10%);
     box-shadow: 0 0 15px 6px rgba(0, 0, 0, 0.3);
-    bottom: 1.5rem;
     border-radius: 1rem 1rem 1rem 1rem;
+    max-height: 23rem;
 }
 
 .Card-info {
-    padding: 5px;
+    padding: 15px 15px 15px 30px;
 }
 
 .Card:hover{
-    transform:scale(1.2);
-    bottom: 3rem;
-    transition: 0.3s ease;
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in;
 }
 
 .video-here2 {
     height: 300px;
     aspect-ratio: 16 / 9;
     border-radius: 1rem 1rem 0 0;
+}
+
+.video-here2:hover {
+    cursor: pointer;
 }
 
 .Audio-inside img{
@@ -171,7 +184,8 @@
 
 .Audio-inside img:hover{
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
 }
 
 @media (pointer:coarse) { 
@@ -182,12 +196,18 @@
         display: none;
     }
     .slider{
+        display: flex;
+        flex-grow: 1;
+        width: calc(100% - 2 * 50px);
         overflow-x: scroll;
         scroll-behavior: smooth;
         overscroll-behavior-inline: contain;
         scroll-snap-type: inline mandatory;
     }
     .group1 img {
+        scroll-snap-align: start; 
+    }
+    .group1 iframe {
         scroll-snap-align: start; 
     }
   }

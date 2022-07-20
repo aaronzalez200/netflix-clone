@@ -9,18 +9,6 @@ export default function App() {
         <Nav />
         <Body />
         <Content />
-        <br></br>
-        <img src={require('./images/Eunha.PNG')} width="200px"/>
-        <br></br>
-        <img src={require('./images/Eunha.PNG')} width="200px"/>
-        <br></br>
-        <img src={require('./images/Eunha.PNG')} width="200px"/>
-        <br></br>
-        <img src={require('./images/Eunha.PNG')} width="200px"/>
-        <br></br>
-        <img src={require('./images/Eunha.PNG')} width="200px"/>
-        <br></br>
-        <h1>Footer</h1>
     </div>
   )
 }
