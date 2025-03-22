@@ -1,6 +1,6 @@
 # Esports Netflix Clone (Team Liquid)
 
-Hosted Link: https://aaron-netflix-clone.netlify.app
+Hosted Link: [https://aaron-netflix-clone.netlify.app](https://benevolent-quokka-53fa16.netlify.app/)
 
 This website uses the React library to create a website with navigation similar to that of Netflix. The content displayed is of the professional Dota 2 esports team *Team Liquid* https://www.teamliquid.com/. The YouTube API is used to fetch videos for two Dota 2 players from Team Liquid used in the 2nd and 3rd row.
 
