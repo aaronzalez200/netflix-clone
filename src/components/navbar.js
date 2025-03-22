@@ -1,6 +1,5 @@
 import React from 'react'
 import Triangle from '../images/triangle.png'
-import Eunha from '../images/Eunha.PNG'
 import Logo from '../images/Logo.png'
 import Search from '../images/search-icon.png'
 import Hamburger from '../images/Hamburger.png'

@@ -1,5 +1,4 @@
 import React from 'react'
-import Eunha from '../images/Eunha.PNG'
 import Left from '../images/LeftArrow.png'
 import Right from '../images/RightArrow.png'
 import Dota from '../images/dota-img.jpg'
@@ -31,7 +30,7 @@ import Thumbnail10 from '../images/Thumbnail10.jpg'
 
 export default function App() {
 
-    const API = 'AIzaSyC_XF3J_KQ944iZcbjzGHd0Sp5KVEANwew'
+    const API = 'AIzaSyD6P4JsS02PVUsVpt1H7btaz5HfIZcSa3U'
     const BSJ = 'UCvTcxoyItMUSlw8T2MajftA'
     const Boxi = 'UC12Oh46CJACjKrGxrFTKeiw'
     const result = 10;
@@ -60,7 +59,6 @@ export default function App() {
 
     console.log(`Fetched Outside...  ${(BSJVideos)}`)
 
-    let MapHere;
     let Holder = undefined;
     let Holder2 = undefined;
     let Done;
@@ -252,6 +250,10 @@ export default function App() {
     const inputRef9 = React.useRef();
     const inputRef10 = React.useRef();
 
+    const [toggleNav1, setToggleNav1] = React.useState(false);
+    const [toggleNav2, setToggleNav2] = React.useState(false);
+    const [toggleNav3, setToggleNav3] = React.useState(false);
+
     return (
         <div className="content">
             <div className="bar1">
@@ -260,11 +262,11 @@ export default function App() {
                 </div>
                 <div className="media-container">
                     {indexFirstRow > 0 && (
-                    <div className="left" onClick={handleLeft1}>
+                    <div className={toggleNav1 ? "left-show" : "left"} onClick={handleLeft1}>
                         <img src={Left} width="50px" height="60%"/>
                     </div>
                     )}
-                    <div className="slider">
+                    <div className="slider" onMouseOver={() => setToggleNav1(true)} onMouseLeave={() => setToggleNav1(false)}>
                         <div className="group1" style={myStyle1}>
                             <div className='Content1' onMouseLeave={handleLeave1}>
                                 {playVideo1 && (
@@ -429,7 +431,7 @@ export default function App() {
                         </div>
                     </div>
                     {indexFirstRow < MAX && (
-                    <div className="right" onClick={handleRight1}>
+                    <div className={toggleNav1 ? "right-show" : "right"} onClick={handleRight1}>
                         <img src={Right} width="50px" height="60%"/>
                     </div>
                     )}
@@ -441,17 +443,17 @@ export default function App() {
                 </div>
                 <div className="media-container">
                     {indexSecondRow > 0 && (
-                    <div className="left" onClick={handleLeft2}>
+                    <div className={toggleNav2 ? "left-show" : "left"} onClick={handleLeft2}>
                         <img src={Left} width="50px" height="60%"/>
                     </div>
                     )}
-                    <div className="slider">
+                    <div className="slider" onMouseOver={() => setToggleNav2(true)} onMouseLeave={() => setToggleNav2(false)}>
                         <div className="group1" style={myStyle2}>
                             {Done !== undefined && (Holder)}
                         </div>
                     </div>
                     {indexSecondRow < MAX && (
-                    <div className="right" onClick={handleRight2}>
+                    <div className={toggleNav2 ? "right-show" : "right"} onClick={handleRight2}>
                         <img src={Right} width="50px" height="60%"/>
                     </div>
                     )}
@@ -463,17 +465,17 @@ export default function App() {
                 </div>
                 <div className="media-container">
                     {indexThirdRow > 0 && (
-                    <div className="left" onClick={handleLeft3}>
+                    <div className={toggleNav3 ? "left-show" : "left"} onClick={handleLeft3}>
                         <img src={Left} width="50px" height="60%"/>
                     </div>
                     )}
-                    <div className="slider">
+                    <div className="slider" onMouseOver={() => setToggleNav3(true)} onMouseLeave={() => setToggleNav3(false)}>
                         <div className="group1" style={myStyle3}>
                             {Done2 !== undefined && (Holder2)}
                         </div>
                     </div>
                     {indexThirdRow < MAX && (
-                    <div className="right" onClick={handleRight3}>
+                    <div className={toggleNav3 ? "right-show" : "right"} onClick={handleRight3}>
                         <img src={Right} width="50px" height="60%"/>
                     </div>
                     )}

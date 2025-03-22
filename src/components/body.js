@@ -1,5 +1,4 @@
 import React from 'react'
-import Eunha from '../images/Eunha.PNG'
 import Play from '../images/Play.png'
 import Info from '../images/Info.png'
 import MainVideo from '../videos/MainVideo.mp4'
