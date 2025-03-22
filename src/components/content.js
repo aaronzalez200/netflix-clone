@@ -1,11 +1,8 @@
 import React from 'react'
 import Left from '../images/LeftArrow.png'
 import Right from '../images/RightArrow.png'
-import Dota from '../images/dota-img.jpg'
-import Video from '../videos/video.mp4'
 import Audios from '../images/Audio.png'
 import Muted from '../images/Muted.png'
-import screenfull from 'screenfull'
 import Clip1 from '../videos/Video1.mp4'
 import Clip2 from '../videos/Video2.mp4'
 import Clip3 from '../videos/Video3.mp4'
@@ -263,7 +260,7 @@ export default function App() {
                 <div className="media-container">
                     {indexFirstRow > 0 && (
                     <div className={toggleNav1 ? "left-show" : "left"} onClick={handleLeft1}>
-                        <img src={Left} width="50px" height="60%"/>
+                        <img src={Left} width="50px" height="60%" alt="image1"/>
                     </div>
                     )}
                     <div className="slider" onMouseOver={() => setToggleNav1(true)} onMouseLeave={() => setToggleNav1(false)}>
@@ -272,7 +269,7 @@ export default function App() {
                                 {playVideo1 && (
                                 <div className="Card">
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image2"/>
                                     </div>
                                     <video src={Clip1} ref={inputRef1} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef1.current).requestFullscreen()}/>
                                     <p className="Card-info">Qojqva tilting Zai for 8 Minutes</p>
@@ -282,13 +279,14 @@ export default function App() {
                                     src={Thumbnail1} 
                                     className="Images-Here-Fill"
                                     onMouseOver={handleHover1}
+                                    alt="image3"
                                 />
                             </div>
                             <div className='Content2'>
                                 {playVideo2 && (
                                 <div className="Card" onMouseLeave={handleLeave2} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image4"/>
                                     </div>
                                     <video src={Clip2} ref={inputRef2} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef2.current).requestFullscreen()}/>
                                     <p className="Card-info">Zai didn't expect this counterpick</p>
@@ -298,13 +296,14 @@ export default function App() {
                                     src={Thumbnail2} 
                                     className="test-img"
                                     onMouseOver={handleHover2}
+                                    alt="image5"
                                 />
                             </div>
                             <div className='Content3'>
                                 {playVideo3 && (
                                 <div className="Card" onMouseLeave={handleLeave3} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image6"/>
                                     </div>
                                     <video src={Clip3} ref={inputRef3} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef3.current).requestFullscreen()}/>
                                     <p className="Card-info">BSJ tried to steal my mmr then this happened...</p>
@@ -314,13 +313,14 @@ export default function App() {
                                     src={Thumbnail3} 
                                     className="test-img"
                                     onMouseOver={handleHover3}
+                                    alt="image7"
                                 />
                             </div>
                             <div className='Content4'>
                                 {playVideo4 && (
                                 <div className="Card" onMouseLeave={handleLeave4} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image8"/>
                                     </div>
                                     <video src={Clip4} ref={inputRef4} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef4.current).requestFullscreen()}/>
                                     <p className="Card-info">Channeling my inner TOPSON</p>
@@ -330,13 +330,14 @@ export default function App() {
                                     src={Thumbnail4} 
                                     className="test-img"
                                     onMouseOver={handleHover4}
+                                    alt="image9"
                                 />
                             </div>
                             <div className='Content5'>
                                 {playVideo5 && (
                                 <div className="Card" onMouseLeave={handleLeave5} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image10"/>
                                     </div>
                                     <video src={Clip5} ref={inputRef5} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef5.current).requestFullscreen()}/>
                                     <p className="Card-info">DOTA PRO TRIES CS GO</p>
@@ -346,13 +347,14 @@ export default function App() {
                                     src={Thumbnail5} 
                                     className="test-img"
                                     onMouseOver={handleHover5}
+                                    alt="image11"
                                 />
                             </div>
                             <div className='Content6'>
                                 {playVideo6 && (
                                 <div className="Card" onMouseLeave={handleLeave6} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image12"/>
                                     </div>
                                     <video src={Clip6} ref={inputRef6} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef6.current).requestFullscreen()}/>
                                     <p className="Card-info">I tried my least played hero...</p>
@@ -362,13 +364,14 @@ export default function App() {
                                     src={Thumbnail6} 
                                     className="test-img"
                                     onMouseOver={handleHover6}
+                                    alt="image13"
                                 />
                             </div>
                             <div className='Content7'>
                                 {playVideo7 && (
                                 <div className="Card" onMouseLeave={handleLeave7} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image14"/>
                                     </div>
                                     <video src={Clip7} ref={inputRef7} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef7.current).requestFullscreen()}/>
                                     <p className="Card-info">Only 1% of people can guess the hero</p>
@@ -378,13 +381,14 @@ export default function App() {
                                     src={Thumbnail7} 
                                     className="test-img"
                                     onMouseOver={handleHover7}
+                                    alt="image15"
                                 />
                             </div>
                             <div className='Content8'>
                                 {playVideo8 && (
                                 <div className="Card" onMouseLeave={handleLeave8} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image16"/>
                                     </div>
                                     <video src={Clip8} ref={inputRef8} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef8.current).requestFullscreen()}/>
                                     <p className="Card-info">Qojqva and Saberlight team up to takedown Topson</p>
@@ -394,13 +398,14 @@ export default function App() {
                                     src={Thumbnail8} 
                                     className="test-img"
                                     onMouseOver={handleHover8}
+                                    alt="image17"
                                 />
                             </div>
                             <div className='Content9'>
                                 {playVideo9 && (
                                 <div className="Card" onMouseLeave={handleLeave9} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image18"/>
                                     </div>
                                     <video src={Clip9} ref={inputRef9} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef9.current).requestFullscreen()}/>
                                     <p className="Card-info">This Build Is TOTALLY BROKEN</p>
@@ -410,13 +415,14 @@ export default function App() {
                                     src={Thumbnail9} 
                                     className="test-img"
                                     onMouseOver={handleHover9}
+                                    alt="image19"
                                 />
                             </div>
                             <div className='Content10'>
                                 {playVideo10 && (
                                 <div className="Card" onMouseLeave={handleLeave10} >
                                     <div className="Audio-inside">
-                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick}/>
+                                        <img src={toggleMuted ? Muted : Audios} onClick={handleAudioClick} alt="image20"/>
                                     </div>
                                     <video src={Clip10} ref={inputRef10} className="video-here2" loop muted={toggleMuted} autoplay="autoPlay" onClick={() => (inputRef10.current).requestFullscreen()}/>
                                     <p className="Card-info">You still not picking this hero on offlane</p>
@@ -426,13 +432,14 @@ export default function App() {
                                     src={Thumbnail10} 
                                     className="test-img"
                                     onMouseOver={handleHover10}
+                                    alt="image21"
                                 />
                             </div>
                         </div>
                     </div>
                     {indexFirstRow < MAX && (
                     <div className={toggleNav1 ? "right-show" : "right"} onClick={handleRight1}>
-                        <img src={Right} width="50px" height="60%"/>
+                        <img src={Right} width="50px" height="60%" alt="image22"/>
                     </div>
                     )}
                 </div>
@@ -444,7 +451,7 @@ export default function App() {
                 <div className="media-container">
                     {indexSecondRow > 0 && (
                     <div className={toggleNav2 ? "left-show" : "left"} onClick={handleLeft2}>
-                        <img src={Left} width="50px" height="60%"/>
+                        <img src={Left} width="50px" height="60%" alt="image23"/>
                     </div>
                     )}
                     <div className="slider" onMouseOver={() => setToggleNav2(true)} onMouseLeave={() => setToggleNav2(false)}>
@@ -454,7 +461,7 @@ export default function App() {
                     </div>
                     {indexSecondRow < MAX && (
                     <div className={toggleNav2 ? "right-show" : "right"} onClick={handleRight2}>
-                        <img src={Right} width="50px" height="60%"/>
+                        <img src={Right} width="50px" height="60%" alt="image24"/>
                     </div>
                     )}
                 </div>
@@ -466,7 +473,7 @@ export default function App() {
                 <div className="media-container">
                     {indexThirdRow > 0 && (
                     <div className={toggleNav3 ? "left-show" : "left"} onClick={handleLeft3}>
-                        <img src={Left} width="50px" height="60%"/>
+                        <img src={Left} width="50px" height="60%" alt="image25"/>
                     </div>
                     )}
                     <div className="slider" onMouseOver={() => setToggleNav3(true)} onMouseLeave={() => setToggleNav3(false)}>
@@ -476,7 +483,7 @@ export default function App() {
                     </div>
                     {indexThirdRow < MAX && (
                     <div className={toggleNav3 ? "right-show" : "right"} onClick={handleRight3}>
-                        <img src={Right} width="50px" height="60%"/>
+                        <img src={Right} width="50px" height="60%" alt="image26"/>
                     </div>
                     )}
                 </div>

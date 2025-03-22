@@ -28,16 +28,16 @@ export default function App() {
                 <div className="sub-text">
                     <div className="video-background-buttons">
                         <div className="Play" tabIndex="0"  onClick={() => (playRef.current).requestFullscreen()}  >
-                            <img src={Play} height="30px"/>
+                            <img src={Play} height="30px" alt="image1"/>
                             <p>Play</p>
                         </div>
                         <div className="More-Info" tabIndex="0">
-                            <img src={Info} height="30px"/>
+                            <img src={Info} height="30px" alt="image2"/>
                             <p>More Info</p>
                         </div>
                     </div>
                     <div className="Audio">
-                        <img src={toggleMute ? Mute : Audio} width="100px" height="100px" onClick={handleClick} onKeyDown={enterAudio} tabIndex="0"/>
+                        <img src={toggleMute ? Mute : Audio} width="100px" height="100px" onClick={handleClick} onKeyDown={enterAudio} tabIndex="0" alt="image3"/>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,6 @@ export default function App() {
     const [toggleMenu, setToggleMenu] = React.useState(false)
     const [search, setSearch] = React.useState(false)
     const [scroll, setScroll] = React.useState(false)
-    const [screen, setScreen] = React.useState('')
     const [toggleNav, setToggleNav] = React.useState(false)
 
     function handleNavClick() {
@@ -49,7 +48,7 @@ export default function App() {
     return (
       <nav className={scroll ? "navbar" : "navbar-active"} onScroll={handleScroll}>
           <ul className="links">
-            <img src={Logo} className="logo"/>
+            <img src={Logo} className="logo" alt="image1"/>
             <li tabIndex="0">
               Home
             </li>
@@ -64,9 +63,9 @@ export default function App() {
             </li>
           </ul>
           <div className="links_small">
-            <img src={Logo} className="logo"/>
+            <img src={Logo} className="logo" alt="image2"/>
               <div className="nav-col">
-                <img className="Hamburger" src={Hamburger} width="50px" onClick={handleNavClick}/>
+                <img className="Hamburger" src={Hamburger} width="50px" onClick={handleNavClick} alt="image3"/>
                 {toggleNav && (
                   <ul className="small-nav">
                     <li tabIndex="0">
@@ -89,7 +88,7 @@ export default function App() {
                 <div className="input-section">
                   <input type="text" className={search ? "search-bar" : "search-bar-active"} placeholder=' search' width='50px'></input>
                   <button className='button'>
-                    <img src={Search} width='70%'/>
+                    <img src={Search} width='70%' alt="image4"/>
                   </button>
                 </div>
               )}
@@ -104,7 +103,7 @@ export default function App() {
             </li>
             {toggleMenu && (
                 <div className="menu">
-                  <img src={Triangle} className='triangle' width="10px"/>
+                  <img src={Triangle} className='triangle' width="10px" alt="image5"/>
                   <ul className="menu-items" onMouseLeave={() => setToggleMenu(false)}>
                     <li>Account</li>
                     <li>History</li>
